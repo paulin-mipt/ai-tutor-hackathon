@@ -1,0 +1,21 @@
+{% extends "material/base.html" %}
+
+{% block title %} Solve your problems{% endblock %}
+{% block content %}
+  <div class="container">
+    Give it a go and try to solve this problem:
+    <h2>Problem</h2>
+    <p>{{ problem }}</p>
+    {% if hints %}
+    <h3>Hints</h3>
+    <p>{{ hints }}</p>
+    {% endif %}
+    <br>
+
+    <form method="POST">
+      <label for="fname">Enter your solution attempt</label>
+      <input type="text" id="student_solution" name="student_solution"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+{% endblock %}
